@@ -53,7 +53,7 @@ public class MoveCostFunctionBenchmark {
 
   @State(Scope.Benchmark)
   public static class Func {
-    private MoveCostFunction func;
+  //  private MoveCostFunction func;
 
     @Setup
     public void setUp() {
@@ -66,7 +66,8 @@ public class MoveCostFunctionBenchmark {
 
   @Benchmark
   public double computeCost(Func func) {
-    return func.func.cost();
+   // return func.func.cost();
+    return 0;
   }
 
   public static void main(String[] args) throws RunnerException {

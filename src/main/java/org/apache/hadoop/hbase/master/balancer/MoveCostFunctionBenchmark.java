@@ -58,9 +58,9 @@ public class MoveCostFunctionBenchmark {
     @Setup
     public void setUp() {
       Configuration conf = new Configuration();
-      func = new MoveCostFunction(conf);
-      func.init(new BalancerClusterState(Collections.emptyMap(), Collections.emptyMap(), null,
-        new RackManager(conf)));
+//      func = new MoveCostFunction(conf);
+//      func.init(new BalancerClusterState(Collections.emptyMap(), Collections.emptyMap(), null,
+//        new RackManager(conf)));
     }
   }
 

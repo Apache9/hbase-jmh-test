@@ -63,7 +63,7 @@ questions.
     <jmh.version>1.0</jmh.version>
     <javac.target>1.8</javac.target>
     <uberjar.name>benchmarks</uberjar.name>
-    <hbase.version>3.0.0-SNAPSHOT</hbase.version>
+    <hbase.version>2.4.12</hbase.version>
   </properties>
 
   <build>

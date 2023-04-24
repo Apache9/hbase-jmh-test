@@ -25,10 +25,8 @@
 
 package org.apache.hadoop.hbase.master.balancer;
 
-import java.util.Collections;
 import java.util.concurrent.TimeUnit;
 import org.apache.hadoop.conf.Configuration;
-import org.apache.hadoop.hbase.master.RackManager;
 import org.openjdk.jmh.annotations.Benchmark;
 import org.openjdk.jmh.annotations.BenchmarkMode;
 import org.openjdk.jmh.annotations.Fork;
@@ -53,26 +51,29 @@ public class MoveCostFunctionBenchmark {
 
   @State(Scope.Benchmark)
   public static class Func {
-  //  private MoveCostFunction func;
+    //  private MoveCostFunction func;
 
     @Setup
     public void setUp() {
       Configuration conf = new Configuration();
-//      func = new MoveCostFunction(conf);
-//      func.init(new BalancerClusterState(Collections.emptyMap(), Collections.emptyMap(), null,
-//        new RackManager(conf)));
+      //      func = new MoveCostFunction(conf);
+      //      func.init(new BalancerClusterState(Collections.emptyMap(), Collections.emptyMap(),
+      // null,
+      //        new RackManager(conf)));
     }
   }
 
   @Benchmark
   public double computeCost(Func func) {
-   // return func.func.cost();
+    // return func.func.cost();
     return 0;
   }
 
   public static void main(String[] args) throws RunnerException {
-    Options opt = new OptionsBuilder()
-      .include(".*" + MoveCostFunctionBenchmark.class.getSimpleName() + ".*").build();
+    Options opt =
+        new OptionsBuilder()
+            .include(".*" + MoveCostFunctionBenchmark.class.getSimpleName() + ".*")
+            .build();
 
     new Runner(opt).run();
   }
